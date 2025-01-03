@@ -1,5 +1,5 @@
-document.getElementById('playButton').addEventListener('click', () => {
-  const audio = new Audio('https://www.soundjay.com/button/beep-07.mp3');
+document.getElementById("musicBtn").addEventListener("click", () => {
+  const audio = new Audio("https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3");
   audio.play();
-  alert('🎶 Music is playing! Enjoy the birthday vibes! 🎶');
+  alert("🎶 Enjoy the birthday song! 🎶");
 });

@@ -1,8 +1,7 @@
 body {
   font-family: 'Arial', sans-serif;
+  background: linear-gradient(to right, #ff9a9e, #fad0c4);
   margin: 0;
-  padding: 0;
-  background: linear-gradient(135deg, #ff9a9e, #fad0c4);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -12,83 +11,68 @@ body {
 
 .container {
   text-align: center;
-  color: #fff;
+  color: white;
   animation: fadeIn 2s ease-in-out;
 }
 
 .title {
-  font-size: 3em;
-  font-weight: bold;
-  margin-bottom: 20px;
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  animation: bounce 1.5s infinite;
 }
 
 .message {
-  font-size: 1.5em;
-  margin-bottom: 30px;
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
 }
 
-.cake {
-  width: 100px;
-  height: 120px;
-  background: #ffb3b3;
-  margin: 0 auto;
-  border-radius: 10px;
+.animation-wrapper {
   position: relative;
 }
 
-.candle {
-  width: 10px;
-  height: 50px;
-  background: #fff;
-  margin: 0 auto;
-  position: relative;
-  top: -20px;
-  border-radius: 5px;
+.cake, .balloon {
+  width: 150px;
+  animation: float 3s ease-in-out infinite;
 }
 
-.flame {
-  width: 15px;
-  height: 15px;
-  background: radial-gradient(circle, #ffcc33, #ff6600);
+.balloon {
   position: absolute;
-  top: -30px;
-  left: 50%;
-  transform: translateX(-50%);
-  border-radius: 50%;
-  animation: flicker 0.8s infinite;
+  left: 30%;
+  animation-delay: 1s;
 }
 
-@keyframes flicker {
-  0%, 100% {
-    opacity: 1;
-    transform: translateX(-50%) scale(1);
+@keyframes float {
+  0% {
+    transform: translateY(0);
   }
   50% {
-    opacity: 0.8;
-    transform: translateX(-50%) scale(1.1);
+    transform: translateY(-20px);
+  }
+  100% {
+    transform: translateY(0);
   }
 }
 
-@keyframes fadeIn {
-  from {
-    opacity: 0;
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
   }
-  to {
-    opacity: 1;
+  50% {
+    transform: translateY(-10px);
   }
 }
 
-.btn {
+button {
   padding: 10px 20px;
-  font-size: 1.2em;
-  color: #fff;
-  background: #ff6f61;
+  background-color: #ff6f61;
   border: none;
   border-radius: 5px;
+  font-size: 1rem;
+  color: white;
   cursor: pointer;
-  transition: background 0.3s;
+  transition: background-color 0.3s;
 }
 
-.btn:hover {
-  background: #e94e3f;
+button:hover {
+  background-color: #e94e3f;
 }
